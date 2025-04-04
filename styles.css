@@ -1,0 +1,252 @@
+body {
+    font-family: sans-serif;
+    background-color: #e6f0ff; /* Default light blue background */
+    color: #1a237e; /* Default dark blue text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.certificate-container {
+    background-color: #fff; /* Default white certificate body */
+    border: 2px solid #3f51b5; /* Medium dark blue border */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    position: relative;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo {
+    color: #1976d2; /* Slightly lighter blue for logo */
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.certificate-title {
+    font-size: 2.5em;
+    color: #283593; /* Stronger dark blue for title */
+    margin-bottom: 30px;
+    transition: color 0.3s ease;
+}
+
+.presented-to {
+    font-size: 1.2em;
+    color: #3f51b5; /* Medium dark blue */
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.name {
+    font-size: 2em;
+    color: #1a237e; /* Dark blue for name */
+    font-weight: bold;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.completion-text {
+    font-size: 1em;
+    color: #5c6bc0; /* Lighter blue */
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.course-name {
+    font-size: 1.5em;
+    color: #283593; /* Stronger dark blue for course name */
+    font-weight: bold;
+    margin-bottom: 30px;
+    transition: color 0.3s ease;
+}
+
+.signature-area {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.signature-line {
+    border-top: 1px solid #9fa8da; /* Medium light blue for signature line */
+    padding-top: 10px;
+    margin-top: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.signature-name {
+    color: #3f51b5; /* Medium dark blue */
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.signature-title {
+    color: #5c6bc0; /* Lighter blue */
+    font-size: 0.8em;
+    transition: color 0.3s ease;
+}
+
+.provided-by {
+    margin-top: 20px;
+    color: #5c6bc0; /* Lighter blue */
+    font-size: 0.9em;
+    text-align: right;
+    transition: color 0.3s ease;
+}
+
+.academy-name {
+    color: #3f51b5; /* Medium dark blue */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.month-year {
+    color: #5c6bc0; /* Lighter blue */
+    font-size: 0.8em;
+    transition: color 0.3s ease;
+}
+
+/* Right Blue Bar */
+.blue-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 100%;
+    background-color: #3f51b5; /* Medium dark blue */
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.verified-badge {
+    background-color: #e3f2fd; /* Very light blue badge */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1976d2; /* Slightly lighter blue for badge text/icon */
+    font-weight: bold;
+    font-size: 1.2em;
+    border: 2px solid #90caf9; /* Light blue badge border */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.verified-text {
+    color: #fff; /* White text on blue bar */
+    font-size: 0.7em;
+    text-align: center;
+    margin-top: 5px;
+    transition: color 0.3s ease;
+}
+
+.qr-code {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #f0f8ff; /* Alice Blue for QR background */
+    border: 1px solid #add8e6; /* Light blue border */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.qr-code img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #1a237e; /* Dark blue background */
+    color: #e3f2fd; /* Light blue text */
+}
+
+body.dark-mode .certificate-container {
+    background-color: #283593; /* Darker blue certificate body */
+    border-color: #5c6bc0; /* Lighter blue border */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .logo {
+    color: #90caf9; /* Lighter blue for logo in dark mode */
+}
+
+body.dark-mode .certificate-title {
+    color: #e3f2fd; /* Light blue for title in dark mode */
+}
+
+body.dark-mode .presented-to,
+body.dark-mode .completion-text,
+body.dark-mode .signature-name,
+body.dark-mode .signature-title,
+body.dark-mode .provided-by,
+body.dark-mode .academy-name,
+body.dark-mode .month-year {
+    color: #90caf9; /* Lighter blue for secondary text in dark mode */
+}
+
+body.dark-mode .name,
+body.dark-mode .course-name {
+    color: #fff; /* White for important text in dark mode */
+}
+
+body.dark-mode .signature-line {
+    border-top-color: #5c6bc0; /* Lighter blue signature line in dark mode */
+}
+
+body.dark-mode .blue-bar {
+    background-color: #283593; /* Darker blue bar in dark mode */
+}
+
+body.dark-mode .verified-badge {
+    background-color: #3f51b5; /* Slightly darker blue badge in dark mode */
+    color: #e3f2fd; /* Light blue badge text in dark mode */
+    border-color: #5c6bc0; /* Lighter blue badge border in dark mode */
+}
+
+body.dark-mode .verified-text {
+    color: #e3f2fd; /* Light blue text on dark blue bar */
+}
+
+body.dark-mode .qr-code {
+    background-color: #424242; /* Dark gray for QR background in dark mode */
+    border-color: #757575; /* Medium gray border */
+}
+
+
+
+
+.button {
+    background-color: #04AA6D; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  .button2 {background-color: #008CBA;} /* Blue */
+  .button3 {background-color: #f44336;} /* Red */ 
+  .button4 {background-color: #e7e7e7; color: black;} /* Gray */ 
+  .button5 {background-color: #555555;} /* Black */
+  
